@@ -7,7 +7,7 @@ public class Média {
 		double NM;
 		double N;
 		double soma = 0;
-		
+		double maior = 0;
 		Scanner entrada = new Scanner(System.in);
 		
 		//NM = Número a ser tirados a média
@@ -18,9 +18,16 @@ public class Média {
 			System.out.println("Informe o " + x + " Número");
 			N = entrada.nextInt();
 			
+		
+			if(N > maior) {
+				maior = N;
+			}
+			
 			soma += N ;
 		}
 		System.out.println("Média: " + soma/NM);
+		
+		System.out.println("O maior dos números inseridos é: "+ maior);
 	}
 
 }
